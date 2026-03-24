@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raymond Maple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="prompt">~</span><span class="nav-name">raymond maple</span><span class="cursor">▋</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#portfolio">portfolio</a></li>
+        <li><a href="#blog">blog</a></li>
+        <li><a href="#apps">ai apps</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">// hello world</div>
+      <h1 class="hero-title">
+        Raymond<br />
+        <span class="accent">Maple</span>
+      </h1>
+      <p class="hero-subtitle">
+        Developer &middot; Educator &middot; AI Enthusiast
+      </p>
+      <p class="hero-description">
+        I build software, create educational content, and explore the intersection of
+        artificial intelligence and practical applications. This is where I share
+        my work, thoughts, and experiments.
+      </p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">∞</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">∞</span>
+          <span class="stat-label">Blog Posts</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">∞</span>
+          <span class="stat-label">AI Apps</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-code" aria-hidden="true">
+      <div class="code-block">
+        <div class="code-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="code-filename">about.py</span>
+        </div>
+        <pre class="code-body"><span class="kw">class</span> <span class="cls">RaymondMaple</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(self):
+        self.role = <span class="str">"Developer"</span>
+        self.passions = [
+            <span class="str">"AI &amp; Machine Learning"</span>,
+            <span class="str">"Education"</span>,
+            <span class="str">"Open Source"</span>,
+        ]
+        self.currently = <span class="str">"Building cool things"</span>
+
+    <span class="kw">def</span> <span class="fn">contact</span>(self):
+        <span class="kw">return</span> <span class="str">"hello@raymondmaple.com"</span></pre>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-desc">Selected projects and work</p>
+      </div>
+      <div class="card-grid">
+        <div class="card card-placeholder">
+          <div class="card-icon">◈</div>
+          <h3>Projects coming soon</h3>
+          <p>This section will showcase my development projects, open source contributions, and professional work.</p>
+          <span class="card-tag">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">Blog</h2>
+        <p class="section-desc">Thoughts, tutorials, and deep dives</p>
+      </div>
+      <div class="card-grid">
+        <div class="card card-placeholder">
+          <div class="card-icon">✍</div>
+          <h3>Posts coming soon</h3>
+          <p>Articles on software development, AI, education, and whatever else I find interesting enough to write about.</p>
+          <span class="card-tag">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Apps -->
+  <section id="apps" class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">AI Applications</h2>
+        <p class="section-desc">Interactive tools powered by artificial intelligence</p>
+      </div>
+      <div class="card-grid">
+        <div class="card card-placeholder">
+          <div class="card-icon">⬡</div>
+          <h3>Apps coming soon</h3>
+          <p>Live AI-powered web applications and experiments. Try them out directly in your browser.</p>
+          <span class="card-tag">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">// 04</span>
+        <h2 class="section-title">Education</h2>
+        <p class="section-desc">Learning resources and teaching materials</p>
+      </div>
+      <div class="card-grid">
+        <div class="card card-placeholder">
+          <div class="card-icon">◎</div>
+          <h3>Materials coming soon</h3>
+          <p>Guides, courses, and reference materials — the educational content I create for students and learners.</p>
+          <span class="card-tag">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <div class="section-inner contact-inner">
+      <div class="section-tag">// 05</div>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-desc">Have a question, collaboration idea, or just want to say hello? I'd love to hear from you.</p>
+      <a href="mailto:hello@raymondmaple.com" class="btn btn-primary btn-lg">hello@raymondmaple.com</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Raymond Maple</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-copy">&copy; 2026</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-built">Built with HTML &amp; CSS</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
