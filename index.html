@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raymond Maple</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -27,6 +29,18 @@
         <li><a href="#education">education</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
+      <div class="nav-controls">
+        <button id="play-btn" class="play-btn">▶ Play</button>
+        <div class="nav-slider-group">
+          <label for="bpm-slider">BPM</label>
+          <input type="range" id="bpm-slider" class="nav-slider" min="80" max="160" value="120" />
+          <span id="bpm-val">120</span>
+        </div>
+        <div class="nav-slider-group">
+          <label for="vol-slider">VOL</label>
+          <input type="range" id="vol-slider" class="nav-slider" min="0" max="100" value="80" />
+        </div>
+      </div>
       <button class="nav-toggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
@@ -43,10 +57,10 @@
         Developer &middot; Educator &middot; AI &middot; Interactive Media
       </p>
       <p class="hero-description">
-        I build software, create educational content, and explore the intersections of
-        artificial intelligence, interactive media, and practical applications.
-        My interests span game development, computer graphics, XR, and AI &mdash;
-        this is where I share my work, thoughts, and experiments.
+        I'm a futurist building interactive worlds with code, sound, and visuals.
+        My work lives at the intersection of AI, XR, and computer graphics, creating
+        experiences that people don't just see, but feel. As an educator, I'm driven
+        to pass that knowledge forward and help shape the next generation of creators.
       </p>
       <div class="hero-actions">
         <a href="#portfolio" class="btn btn-primary">View Work</a>
