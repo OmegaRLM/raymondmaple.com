@@ -5,6 +5,20 @@ const ROWS = 12;
 const NAV_H = 64;
 let activeCell = null;
 
+function savePattern() {
+  const active = [...gridBg.children].map(c => c.classList.contains('active') ? 1 : 0);
+  localStorage.setItem('gridPattern', JSON.stringify(active));
+}
+
+function loadPattern() {
+  const saved = localStorage.getItem('gridPattern');
+  if (!saved) return;
+  const active = JSON.parse(saved);
+  active.forEach((on, i) => {
+    if (on && gridBg.children[i]) gridBg.children[i].classList.add('active');
+  });
+}
+
 function buildGrid() {
   gridBg.innerHTML = '';
   activeCell = null;
@@ -17,6 +31,7 @@ function buildGrid() {
     if (col > 0 && col % 4 === 0) cell.classList.add('measure-start');
     gridBg.appendChild(cell);
   }
+  loadPattern();
 }
 
 function fadeOut(cell) {
@@ -69,6 +84,7 @@ window.addEventListener('click', e => {
     if (audioCtx.state === 'suspended') audioCtx.resume();
     sounds[row](audioCtx.currentTime);
   }
+  savePattern();
 });
 
 buildGrid();
@@ -345,8 +361,25 @@ function stopPlayback() {
 }
 
 document.getElementById('play-btn').addEventListener('click', () => {
-  isPlaying ? stopPlayback() : startPlayback();
+  if (isPlaying) {
+    stopPlayback();
+    localStorage.setItem('sequencerStopped', '1');
+  } else {
+    startPlayback();
+    localStorage.removeItem('sequencerStopped');
+  }
 });
+
+// Auto-start on first user gesture unless they previously stopped it
+if (!localStorage.getItem('sequencerStopped')) {
+  const autoStart = () => {
+    if (!isPlaying) startPlayback();
+    window.removeEventListener('click', autoStart);
+    window.removeEventListener('keydown', autoStart);
+  };
+  window.addEventListener('click', autoStart);
+  window.addEventListener('keydown', autoStart);
+}
 
 document.getElementById('bpm-slider').addEventListener('input', e => {
   bpm = parseInt(e.target.value);

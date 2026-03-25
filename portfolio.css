@@ -64,7 +64,7 @@
 .pf-main {
   position: relative;
   z-index: 1;
-  padding-bottom: 96px;
+  padding-bottom: 50vh;
 }
 
 .pf-timeline {
@@ -78,7 +78,7 @@
 .pf-timeline::before {
   content: '';
   position: absolute;
-  left: calc(24px + 56px); /* padding + year column width */
+  left: calc(24px + 51px); /* padding + year column width */
   top: 0;
   bottom: 0;
   width: 1px;
@@ -96,14 +96,14 @@
   display: flex;
   align-items: baseline;
   gap: 16px;
-  padding: 48px 0 24px calc(56px + 28px);
+  padding: 48px 0 24px calc(51px + 28px);
   position: relative;
 }
 
 .pf-studio-label::before {
   content: '';
   position: absolute;
-  left: calc(56px + 28px - 21px); /* align with timeline line */
+  left: calc(51px + 28px - 21px); /* align with timeline line */
   top: 50%;
   width: 18px;
   height: 1px;
@@ -128,7 +128,7 @@
 /* Individual game entry */
 .pf-entry {
   display: grid;
-  grid-template-columns: 56px 28px 1fr;
+  grid-template-columns: 51px 28px 1fr;
   gap: 0;
   margin-bottom: 32px;
   align-items: start;
@@ -141,16 +141,20 @@
 
 /* Year column */
 .pf-year {
-  padding-top: 18px;
+  padding-top: 14px;
   text-align: right;
   padding-right: 0;
 }
 
 .pf-year span {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 15px;
   color: var(--text-dim);
+  display: inline-block;
+  transition: color .15s, transform .15s;
+  transform-origin: right center;
 }
+
 
 /* Dot on the timeline */
 .pf-line-dot {
@@ -186,12 +190,12 @@
   border-radius: var(--radius-lg);
   padding: 20px;
   margin-left: 8px;
-  transition: border-color .15s, transform .15s;
+  transform-origin: left center;
+  transition: border-color .15s, transform .15s, box-shadow .15s;
 }
 
 .pf-card:hover {
   border-color: var(--border-hi);
-  transform: translateX(4px);
 }
 
 /* Box art */
@@ -322,10 +326,10 @@
   }
 
   .pf-timeline::before {
-    left: calc(24px + 48px);
+    left: calc(24px + 43px);
   }
 
   .pf-entry {
-    grid-template-columns: 48px 24px 1fr;
+    grid-template-columns: 43px 24px 1fr;
   }
 }

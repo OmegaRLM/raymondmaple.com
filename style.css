@@ -479,12 +479,13 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 28px;
-  transition: border-color .15s, transform .15s;
+  transition: border-color .15s, transform .15s, box-shadow .15s;
 }
 
 .card:hover {
-  border-color: var(--border-hi);
+  border-color: rgba(120, 200, 255, 0.6);
   transform: translateY(-2px);
+  box-shadow: 0 0 0 1px rgba(120, 200, 255, 0.15), 0 4px 24px rgba(120, 200, 255, 0.1);
 }
 
 .card-placeholder {
