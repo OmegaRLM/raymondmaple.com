@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Raymond Maple</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+  <div id="grid-bg" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="prompt">~</span><span class="nav-name">raymond maple</span><span class="cursor">▋</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#portfolio">portfolio</a></li>
+        <li><a href="/#blog">blog</a></li>
+        <li><a href="/#apps">ai apps</a></li>
+        <li><a href="/#education">education</a></li>
+        <li><a href="/#contact">contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <div class="pf-header">
+    <div class="pf-header-inner">
+      <span class="section-tag">// portfolio</span>
+      <h1 class="pf-title">20+ Years of Game Development</h1>
+      <p class="pf-subtitle">
+        The story of my life. A catalog of titles I've contributed to as a programmer
+        across handheld, console, PC, and beyond.
+      </p>
+      <div class="pf-filters">
+        <button class="pf-filter active" data-filter="all">All</button>
+        <button class="pf-filter" data-filter="wayforward">WayForward</button>
+        <button class="pf-filter" data-filter="disney">Disney / Avalanche</button>
+        <button class="pf-filter" data-filter="recent">Recent</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="pf-main">
+    <div class="pf-timeline">
+
+      <!-- ===================== RECENT ===================== -->
+      <div class="pf-studio-label" data-studio="recent">
+        <span class="studio-name">Recent Credits</span>
+        <span class="studio-years">2022 – 2024</span>
+      </div>
+
+      <article class="pf-entry" data-studio="recent">
+        <div class="pf-year"><span>2024</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/epic-mickey-rebrushed.jpg" alt="Disney Epic Mickey: Rebrushed box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney Epic Mickey: Rebrushed</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Senior Programmer</span>
+              <span class="pf-badge pf-badge-platform">Switch · PS4 · PS5 · Xbox · PC</span>
+              <span class="pf-badge pf-badge-studio recent">Purple Lamp / THQ Nordic</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="recent">
+        <div class="pf-year"><span>2022</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/river-city-girls-2.jpg" alt="River City Girls 2 box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">River City Girls 2</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Special Thanks</span>
+              <span class="pf-badge pf-badge-platform">Switch · PS4 · PS5 · Xbox · PC</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===================== DISNEY / AVALANCHE ===================== -->
+      <div class="pf-studio-label" data-studio="disney">
+        <span class="studio-name">Avalanche Software · Disney Interactive</span>
+        <span class="studio-years">2008 – 2016</span>
+      </div>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2015</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/disney-infinity-3.jpg" alt="Disney Infinity 3.0 box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney Infinity 3.0 Edition</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">PS3 · PS4 · Xbox 360 · Xbox One · Wii U · PC · iOS</span>
+              <span class="pf-badge pf-badge-studio disney">Avalanche Software</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2015</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/disney-infinity-toybox-2.jpg" alt="Disney Infinity Toy Box 2.0 box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney Infinity: Toy Box 2.0</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">iOS · Android</span>
+              <span class="pf-badge pf-badge-studio disney">Avalanche Software</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2014</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/disney-infinity-2-marvel.jpg" alt="Disney Infinity 2.0 Marvel Super Heroes box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney Infinity 2.0: Marvel Super Heroes</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">PS3 · PS4 · Xbox 360 · Xbox One · PS Vita · PC · iOS</span>
+              <span class="pf-badge pf-badge-studio disney">Avalanche Software</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2013</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/disney-infinity.jpg" alt="Disney Infinity box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney Infinity</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">PS3 · Xbox 360 · Wii · Wii U · PC · iOS</span>
+              <span class="pf-badge pf-badge-studio disney">Avalanche Software</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2011</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/cars-2-2011.jpg" alt="Disney Pixar Cars 2 box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney·Pixar Cars 2</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">PS3 · Xbox 360 · Wii · NDS · 3DS · PC</span>
+              <span class="pf-badge pf-badge-studio disney">Avalanche Software</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2010</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/toy-story-3-shooting-gallery.jpg" alt="Disney Pixar Toy Story 3: Shooting Gallery box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney·Pixar Toy Story 3 — Shooting Gallery</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Lead Programmer</span>
+              <span class="pf-badge pf-badge-platform">PS3 Move</span>
+              <span class="pf-badge pf-badge-studio disney">Avalanche Software</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2010</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/toy-story-3.jpg" alt="Disney Pixar Toy Story 3 box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney·Pixar Toy Story 3</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">PS3 · Xbox 360 · Wii · NDS · PSP · PC</span>
+              <span class="pf-badge pf-badge-studio disney">Avalanche Software</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2010</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/epic-mickey.jpg" alt="Disney Epic Mickey box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney Epic Mickey</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Senior Programmer</span>
+              <span class="pf-badge pf-badge-platform">Wii</span>
+              <span class="pf-badge pf-badge-studio disney">Junction Point Studios</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2009</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/pirates-cruise-line.jpg" alt="Disney Cruise Line - Pirates of the Caribbean box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Disney Cruise Line — Pirates of the Caribbean</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Lead Programmer</span>
+              <span class="pf-badge pf-badge-platform">Interactive Experience</span>
+              <span class="pf-badge pf-badge-studio disney">Disney Interactive</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2008</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/narnia-prince-caspian.jpg" alt="The Chronicles of Narnia: Prince Caspian box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">The Chronicles of Narnia: Prince Caspian</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">PS3 · Xbox 360 · Wii · NDS · PC</span>
+              <span class="pf-badge pf-badge-studio disney">Fall Line Studio</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="disney">
+        <div class="pf-year"><span>2008</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/ultimate-band.jpg" alt="Ultimate Band box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Ultimate Band</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Additional Programming</span>
+              <span class="pf-badge pf-badge-platform">Wii · NDS</span>
+              <span class="pf-badge pf-badge-studio disney">Fall Line Studio</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===================== WAYFORWARD ===================== -->
+      <div class="pf-studio-label" data-studio="wayforward">
+        <span class="studio-name">WayForward Technologies</span>
+        <span class="studio-years">1996 – 2007</span>
+      </div>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2007</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/contra-4.jpg" alt="Contra 4 box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Contra 4</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Contributor</span>
+              <span class="pf-badge pf-badge-platform">NDS</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2007</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/looney-tunes-duck-amuck.jpg" alt="Looney Tunes: Duck Amuck box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Looney Tunes: Duck Amuck</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">NDS</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2006</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/spongebob-creature-krusty-krab.jpg" alt="SpongeBob SquarePants: Creature from the Krusty Krab box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">SpongeBob SquarePants: Creature from the Krusty Krab</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Lead Programmer</span>
+              <span class="pf-badge pf-badge-platform">GBA · NDS · GameCube · PS2 · Wii · PC</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2006</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/looney-tunes-double-pack.jpg" alt="Looney Tunes Double Pack box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Looney Tunes Double Pack: Dizzy Driving / Acme Antics</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">GBA</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2005</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/tmnt-battle-for-the-city.jpg" alt="Teenage Mutant Ninja Turtles: Battle for the City box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Teenage Mutant Ninja Turtles: Battle for the City</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">GBA</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2003</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/spy-vs-spy.jpg" alt="Spy vs. Spy box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Spy vs. Spy <span class="pf-unreleased">Unreleased</span></h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Lead Programmer</span>
+              <span class="pf-badge pf-badge-platform">Xbox · PS2</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2002</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/shantae.jpg" alt="Shantae box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Shantae</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Special Thanks</span>
+              <span class="pf-badge pf-badge-platform">GBC</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2002</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/pacific-gunner.jpg" alt="Pacific Gunner box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Pacific Gunner</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Additional Programming</span>
+              <span class="pf-badge pf-badge-platform">PS2</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2001</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/pearl-harbor.jpg" alt="Pearl Harbor: Defend the Fleet box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Pearl Harbor: Defend the Fleet</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">GBA</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2001</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/big-mouth-bass-3d.jpg" alt="Big Mouth Bass 3D box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Big Mouth Bass 3D</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Lead Programmer</span>
+              <span class="pf-badge pf-badge-platform">Web</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2000</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/xtreme-sports-gbc.jpg" alt="Xtreme Sports box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Xtreme Sports</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Special Thanks</span>
+              <span class="pf-badge pf-badge-platform">GBC</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2000</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/games-interactive-2.jpg" alt="GAMES Interactive 2 box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">GAMES Interactive 2</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">Windows</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>2000</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/delirium.jpg" alt="Delirium box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Delirium</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Lead Programmer</span>
+              <span class="pf-badge pf-badge-platform">Web</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>1999</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/xtreme-sports-arcade.jpg" alt="Xtreme Sports Arcade: Summer Edition box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Xtreme Sports Arcade: Summer Edition</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Lead Programmer</span>
+              <span class="pf-badge pf-badge-platform">Windows</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>1998</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/microshaft-winblows-98.jpg" alt="Microshaft Winblows 98 box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Microshaft Winblows 98</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">Windows</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>1998</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/funpack-3d.jpg" alt="FunPack 3D box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">FunPack 3D</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">Windows</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>1998</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/casper-activity-center.jpg" alt="Casper: Animated Activity Center box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Casper: Animated Activity Center</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">Windows</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>1997</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/star-warped.jpg" alt="Star Warped box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Star Warped</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">PC</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>1997</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/american-tail.jpg" alt="An American Tail: Animated MovieBook box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">An American Tail: Animated MovieBook</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">Windows</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>1997</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/x-fools.jpg" alt="The X-Fools: The Spoof Is Out There box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">The X-Fools: The Spoof Is Out There</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">Windows</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pf-entry" data-studio="wayforward">
+        <div class="pf-year"><span>1996</span></div>
+        <div class="pf-line-dot"></div>
+        <div class="pf-card">
+          <div class="pf-img-wrap">
+            <img src="img/games/pyst.jpg" alt="Pyst box art"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="pf-img-placeholder" style="display:none"><span>Box Art</span></div>
+          </div>
+          <div class="pf-info">
+            <h2 class="pf-game-title">Pyst</h2>
+            <div class="pf-meta">
+              <span class="pf-badge pf-badge-role">Programmer</span>
+              <span class="pf-badge pf-badge-platform">Windows</span>
+              <span class="pf-badge pf-badge-studio wayforward">WayForward</span>
+            </div>
+            <p class="pf-desc">Add your description here.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Raymond Maple</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-copy">&copy; 2026</span>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+/* ===== Portfolio page ===== */
+
+/* Page header */
+.pf-header {
+  padding-top: calc(var(--nav-h) + 64px);
+  padding-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.pf-header-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pf-title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 600;
+  letter-spacing: -.02em;
+  margin-bottom: 12px;
+}
+
+.pf-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Filter buttons */
+.pf-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pf-filter {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--border-hi);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.pf-filter:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+.pf-filter.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0d1117;
+  font-weight: 600;
+}
+
+/* Main timeline container */
+.pf-main {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 96px;
+}
+
+.pf-timeline {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+/* The vertical line */
+.pf-timeline::before {
+  content: '';
+  position: absolute;
+  left: calc(24px + 56px); /* padding + year column width */
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--border-hi) 5%,
+    var(--border-hi) 95%,
+    transparent
+  );
+}
+
+/* Studio label / section divider */
+.pf-studio-label {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 48px 0 24px calc(56px + 28px);
+  position: relative;
+}
+
+.pf-studio-label::before {
+  content: '';
+  position: absolute;
+  left: calc(56px + 28px - 21px); /* align with timeline line */
+  top: 50%;
+  width: 18px;
+  height: 1px;
+  background: var(--border-hi);
+}
+
+.studio-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.studio-years {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* Individual game entry */
+.pf-entry {
+  display: grid;
+  grid-template-columns: 56px 28px 1fr;
+  gap: 0;
+  margin-bottom: 32px;
+  align-items: start;
+  transition: opacity .2s;
+}
+
+.pf-entry.hidden {
+  display: none;
+}
+
+/* Year column */
+.pf-year {
+  padding-top: 18px;
+  text-align: right;
+  padding-right: 0;
+}
+
+.pf-year span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* Dot on the timeline */
+.pf-line-dot {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+}
+
+.pf-line-dot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-hi);
+  border: 1px solid var(--text-dim);
+  flex-shrink: 0;
+  transition: background .15s, border-color .15s;
+}
+
+.pf-entry:hover .pf-line-dot::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Game card */
+.pf-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-left: 8px;
+  transition: border-color .15s, transform .15s;
+}
+
+.pf-card:hover {
+  border-color: var(--border-hi);
+  transform: translateX(4px);
+}
+
+/* Box art */
+.pf-img-wrap {
+  flex-shrink: 0;
+}
+
+.pf-img-placeholder {
+  width: 120px;
+  height: 160px;
+  border-radius: 6px;
+  background: var(--bg-alt);
+  border: 1px dashed var(--border-hi);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.pf-img-wrap img {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Game info */
+.pf-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pf-game-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.pf-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pf-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+}
+
+.pf-badge-role {
+  background: rgba(88, 166, 255, .1);
+  border-color: rgba(88, 166, 255, .2);
+  color: var(--accent);
+}
+
+.pf-badge-platform {
+  background: rgba(210, 168, 255, .08);
+  border-color: rgba(210, 168, 255, .15);
+  color: var(--accent-3);
+}
+
+.pf-badge-studio {
+  font-weight: 600;
+}
+.pf-badge-studio.wayforward {
+  background: rgba(63, 185, 80, .1);
+  border-color: rgba(63, 185, 80, .2);
+  color: var(--accent-2);
+}
+.pf-badge-studio.disney {
+  background: rgba(255, 166, 87, .1);
+  border-color: rgba(255, 166, 87, .2);
+  color: var(--accent-4);
+}
+.pf-badge-studio.wb {
+  background: rgba(210, 168, 255, .1);
+  border-color: rgba(210, 168, 255, .2);
+  color: var(--accent-3);
+}
+.pf-badge-studio.epic {
+  background: rgba(88, 166, 255, .1);
+  border-color: rgba(88, 166, 255, .2);
+  color: var(--accent);
+}
+.pf-badge-studio.recent {
+  background: rgba(63, 185, 80, .08);
+  border-color: rgba(63, 185, 80, .18);
+  color: var(--accent-2);
+}
+
+.pf-unreleased {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  padding: 2px 8px;
+  border-radius: 100px;
+  background: rgba(255, 166, 87, .12);
+  border: 1px solid rgba(255, 166, 87, .25);
+  color: var(--accent-4);
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.pf-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .pf-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pf-img-placeholder,
+  .pf-img-wrap img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .pf-timeline::before {
+    left: calc(24px + 48px);
+  }
+
+  .pf-entry {
+    grid-template-columns: 48px 24px 1fr;
+  }
+}
