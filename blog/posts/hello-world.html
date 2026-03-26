@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World — Raymond Maple</title>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../blog.css" />
+</head>
+<body>
+
+  <canvas id="fluid-bg" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="prompt">~</span><span class="nav-name">raymond maple</span><span class="cursor">▋</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#portfolio">portfolio</a></li>
+        <li><a href="/blog/" class="active">blog</a></li>
+        <li><a href="/#apps">ai apps</a></li>
+        <li><a href="/#education">education</a></li>
+        <li><a href="/#contact">contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <div class="nav-slider-group">
+          <label for="fade-slider">FADE</label>
+          <input type="range" id="fade-slider" class="nav-slider" min="1" max="100" value="65" />
+        </div>
+        <div class="nav-slider-group">
+          <label for="force-slider">FORCE</label>
+          <input type="range" id="force-slider" class="nav-slider" min="1" max="100" value="50" />
+        </div>
+        <div class="nav-slider-group">
+          <label for="visc-slider">VISC</label>
+          <input type="range" id="visc-slider" class="nav-slider" min="1" max="100" value="33" />
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <div class="post-header">
+    <div class="post-header-inner">
+      <a href="/blog/" class="post-back">← Back to Blog</a>
+      <div class="post-meta">
+        <span class="blog-date">2026-03-25</span>
+        <span class="blog-tag">Meta</span>
+      </div>
+      <h1 class="post-title">Hello World</h1>
+      <p class="post-subtitle">The first post — what this blog is, why I'm writing it, and what to expect.</p>
+    </div>
+  </div>
+
+  <main class="post-main">
+    <div class="post-body">
+
+      <p>Every blog starts somewhere. This is mine.</p>
+
+      <p>Write your post content here. You can use any standard HTML — paragraphs, headings, lists, code blocks, images, etc.</p>
+
+      <h2>A code example</h2>
+
+      <pre><code>function hello() {
+  console.log("Hello, world!");
+}</code></pre>
+
+      <h2>A list</h2>
+
+      <ul>
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>Item three</li>
+      </ul>
+
+      <hr />
+
+      <p>That's all for now.</p>
+
+    </div>
+
+    <nav class="post-nav">
+      <span></span>
+      <a href="/blog/">All posts →</a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Raymond Maple</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-copy">&copy; 2026</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-built">Built with HTML &amp; CSS</span>
+    </div>
+  </footer>
+
+  <script src="../blog-bg.js"></script>
+</body>
+</html>
