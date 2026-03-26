@@ -432,8 +432,9 @@
     forceMultiplier = 0.1 + (parseInt(e.target.value) / 100) * 1.9;
   });
   if (viscSlider)  viscSlider.addEventListener('input', e => {
-    // Higher slider = more viscous = velocity dies faster = lower dissipation
-    velDissipation = 0.995 - (parseInt(e.target.value) / 100) * 0.045;
+    // Left (low) = thick/viscous = velocity dies fast = low dissipation
+    // Right (high) = thin/light  = velocity persists = high dissipation
+    velDissipation = 0.950 + (parseInt(e.target.value) / 100) * 0.045;
   });
 
   let colorIdx = 0;
