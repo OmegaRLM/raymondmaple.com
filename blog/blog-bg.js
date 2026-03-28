@@ -1,6 +1,11 @@
 'use strict';
 (function () {
 
+  // ── random page title ─────────────────────────────────────
+  const TITLES = ['Writing', 'Reading', 'Coding', 'Listening', 'Creating', 'Dreaming', 'Playing'];
+  const titleEl = document.querySelector('.blog-title');
+  if (titleEl) titleEl.textContent = TITLES[Math.floor(Math.random() * TITLES.length)];
+
   const canvas = document.getElementById('fluid-bg');
   if (!canvas) return;
 
