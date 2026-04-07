@@ -1,0 +1,173 @@
+/* ===== About page overrides ===== */
+
+.about-page {
+  overflow: hidden;
+}
+
+/* Remove grid-bg on this page */
+.about-page #grid-bg {
+  display: none;
+}
+
+/* ===== Split layout ===== */
+.about-layout {
+  display: flex;
+  height: 100vh;
+  padding-top: var(--nav-h);
+}
+
+/* ===== Left panel — 3D scene ===== */
+.about-scene-panel {
+  position: sticky;
+  top: var(--nav-h);
+  width: 50%;
+  height: calc(100vh - var(--nav-h));
+  flex-shrink: 0;
+  background: #000;
+  /* Radial gradient: blue glow on left/center, fades to black */
+  background-image: radial-gradient(
+    ellipse 80% 70% at 40% 55%,
+    rgba(58, 100, 180, 0.35) 0%,
+    rgba(30, 50, 110, 0.18) 40%,
+    transparent 70%
+  );
+  overflow: hidden;
+}
+
+#about-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ===== Right panel — content ===== */
+.about-content-panel {
+  flex: 1;
+  height: calc(100vh - var(--nav-h));
+  overflow-y: auto;
+  background: #000;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content-inner {
+  flex: 1;
+  padding: 64px 56px;
+  max-width: 580px;
+}
+
+/* ===== Typography ===== */
+.about-title {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  margin: 12px 0 8px;
+}
+
+.about-subtitle {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: .08em;
+  margin-bottom: 40px;
+}
+
+/* ===== Bio ===== */
+.about-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.about-bio p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.about-bio strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ===== Focus list ===== */
+.about-focus {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 56px;
+  border-top: 1px solid var(--border);
+}
+
+.focus-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.focus-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.focus-desc {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: .04em;
+}
+
+/* ===== Contact block ===== */
+.about-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-contact p {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* ===== Footer inside right panel ===== */
+.about-footer {
+  border-top: 1px solid var(--border);
+  background: transparent;
+  margin-top: auto;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .about-page {
+    overflow: auto;
+  }
+
+  .about-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-scene-panel {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 320px;
+  }
+
+  .about-content-panel {
+    height: auto;
+    overflow-y: visible;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .about-content-inner {
+    padding: 40px 24px;
+  }
+}

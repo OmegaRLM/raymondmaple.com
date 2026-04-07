@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Raymond Maple</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body class="about-page">
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="prompt">~</span><span class="nav-name">raymond maple</span><span class="cursor">▋</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#portfolio">portfolio</a></li>
+        <li><a href="/#blog">blog</a></li>
+        <li><a href="/#apps">projects</a></li>
+        <li><a href="/#education">education</a></li>
+        <li><a href="/about.html" class="nav-active">about</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <div class="about-layout">
+
+    <!-- Left: 3D viewport -->
+    <div class="about-scene-panel">
+      <canvas id="about-canvas"></canvas>
+    </div>
+
+    <!-- Right: content -->
+    <div class="about-content-panel">
+
+      <div class="about-content-inner">
+
+        <span class="section-tag">// about</span>
+        <h1 class="about-title">Raymond<br /><span class="accent">Maple</span></h1>
+        <p class="about-subtitle">Developer &middot; Educator &middot; Futurist</p>
+
+        <div class="about-bio">
+          <p>
+            I'm a developer and educator with over <strong>20 years of experience</strong> building interactive experiences. My work lives at the intersection of game development, AI, XR, and simulations — creating things that immerse and entertain people.
+          </p>
+          <p>
+            I spent the core of my career at <strong>WayForward Technologies</strong> and <strong>Disney / Avalanche Software</strong>, shipping titles across handheld, console, and PC. At Avalanche I contributed to the <em>Disney Infinity</em> franchise, <em>Epic Mickey</em>, Cars, Toy Story, and more.
+          </p>
+          <p>
+            Outside of games, I teach, write, and build tools at the edges of what's possible with code, sound, and visuals.
+          </p>
+        </div>
+
+        <div class="about-focus">
+          <div class="focus-item">
+            <span class="focus-label">Game Development</span>
+            <span class="focus-desc">20+ years · WayForward · Disney / Avalanche</span>
+          </div>
+          <div class="focus-item">
+            <span class="focus-label">AI &amp; Machine Learning</span>
+            <span class="focus-desc">Generative tools · Intelligent systems · Interactive media</span>
+          </div>
+          <div class="focus-item">
+            <span class="focus-label">XR &amp; Immersive Tech</span>
+            <span class="focus-desc">Extended reality · Simulations · Spatial computing</span>
+          </div>
+          <div class="focus-item">
+            <span class="focus-label">Education</span>
+            <span class="focus-desc">Programming · Game design · Creative technology</span>
+          </div>
+        </div>
+
+        <div class="about-contact">
+          <span class="section-tag">// get in touch</span>
+          <p>Have a question, collaboration idea, or just want to say hello?</p>
+          <a href="mailto:hello@raymondmaple.com" class="btn btn-primary">hello@raymondmaple.com</a>
+        </div>
+
+      </div>
+
+      <footer class="footer about-footer">
+        <div class="footer-inner">
+          <span class="footer-name">Raymond Maple</span>
+          <span class="footer-sep">·</span>
+          <span class="footer-copy">&copy; 2026</span>
+          <span class="footer-sep">·</span>
+          <span class="footer-built">Built with HTML &amp; CSS</span>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script type="module" src="about.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
