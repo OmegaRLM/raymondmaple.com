@@ -47,6 +47,46 @@ if (canvas) {
   let model = null;
   let prevTime = performance.now();
 
+  // Drag-to-rotate state
+  let isDragging = false;
+  let dragStartX = 0;
+  let rotationOnDragStart = 0;
+
+  canvas.addEventListener('mousedown', e => {
+    isDragging = true;
+    dragStartX = e.clientX;
+    if (model) rotationOnDragStart = model.rotation.y;
+    canvas.style.cursor = 'grabbing';
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    canvas.style.cursor = 'grab';
+  });
+
+  window.addEventListener('mousemove', e => {
+    if (!isDragging || !model) return;
+    const dx = e.clientX - dragStartX;
+    model.rotation.y = rotationOnDragStart + dx * 0.008;
+  });
+
+  // Touch support
+  canvas.addEventListener('touchstart', e => {
+    isDragging = true;
+    dragStartX = e.touches[0].clientX;
+    if (model) rotationOnDragStart = model.rotation.y;
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => { isDragging = false; });
+
+  window.addEventListener('touchmove', e => {
+    if (!isDragging || !model) return;
+    const dx = e.touches[0].clientX - dragStartX;
+    model.rotation.y = rotationOnDragStart + dx * 0.008;
+  }, { passive: true });
+
+  canvas.style.cursor = 'grab';
+
   // Load model
   const loader = new GLTFLoader();
   loader.load(
@@ -61,8 +101,8 @@ if (canvas) {
         gltf.animations.forEach(clip => mixer.clipAction(clip).play());
       }
 
-      // Rotate model to face down -Z (toward camera)
-      model.rotation.y = -Math.PI / 2;
+      // Rotate model to face toward camera 
+      model.rotation.y = 0;
 
       // Center and fit model in view
       const box = new THREE.Box3().setFromObject(model);
@@ -71,7 +111,7 @@ if (canvas) {
       model.position.sub(center);
 
       const maxDim = Math.max(size.x, size.y, size.z);
-      camera.position.set(0, 1, maxDim * 1.8);
+      camera.position.set(0, 0, maxDim * 1.8);
       camera.near = maxDim * 0.01;
       camera.far = maxDim * 100;
       camera.updateProjectionMatrix();
@@ -88,9 +128,6 @@ if (canvas) {
     const delta = (now - prevTime) / 1000;
     prevTime = now;
     if (mixer) mixer.update(delta);
-
-    // Slow Y rotation
-    if (model) model.rotation.y += delta * 0.4;
 
     // Subtle parallax drift (disabled)
     // camera.position.x += (mouseX * 0.6 - camera.position.x) * 0.04;
